@@ -1,5 +1,6 @@
 package org.example.service;
 
+import lombok.AllArgsConstructor;
 import org.example.model.TodoEntity;
 import org.example.model.TodoRequest;
 import org.example.repository.TodoRepository;
@@ -11,6 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class TodoService {
     @Autowired
     private TodoRepository todoRepository;
