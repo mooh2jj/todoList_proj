@@ -19,7 +19,7 @@ public class TodoEntity {
     @Column(nullable = false)
     private String title;
 
-    @Column(nullable = false)
+    @Column(name = "todoOrder", nullable = false)
     private Long order;
 
     @Column(nullable = false)

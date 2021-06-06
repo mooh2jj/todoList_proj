@@ -14,6 +14,7 @@ public class TodoResponse {
     private Boolean completed;
     private String url;
 
+    // todoEntity의 값으로 초기화
     public TodoResponse(TodoEntity todoEntity){
         this.id = todoEntity.getId();
         this.title = todoEntity.getTitle();

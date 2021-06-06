@@ -34,6 +34,7 @@ public class TodoService {
 
     public TodoEntity searchById(Long id){
         return this.todoRepository.findById(id)
+                // 값이 없으면
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
@@ -52,7 +53,7 @@ public class TodoService {
         if (request.getCompleted() != null) {
             todoEntity.setCompleted(request.getCompleted());
         }
-        return this.todoRepository.save(todoEntity);
+        return this.todoRepository.save(todoEntity);        // update도 똑같이 save
     }
 
     public void deleteById(Long id){
